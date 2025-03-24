@@ -1,0 +1,22 @@
+services:
+
+  api-dev:
+    build:
+      target: development
+      context: .
+      args:
+        - PORT=${PORT:-3000}
+        - NODE_ENV=${NODE_ENV:-development}
+        - IS_CONTAINERIZED=${IS_CONTAINERIZED:-true}
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - PORT=3000
+    volumes:
+       - ..:/workspaces:cached
+    command: sleep infinity 
+networks:
+  app-network:
+    driver: bridge 
