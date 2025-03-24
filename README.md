@@ -30,4 +30,12 @@ type(scope?): subject
 - updated code (missing type)
 - FIX: something (type in uppercase)
 - feat: Add new feature (subject in uppercase)
-- chore: update dependencies. (ends with period) 
+- chore: update dependencies. (ends with period)
+
+## Git Hooks
+
+This project uses Husky to manage Git hooks:
+
+- `pre-commit`: Runs linting and tests
+- `commit-msg`: Validates commit message format
+- `pre-push`: Runs all tests 
