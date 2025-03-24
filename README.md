@@ -38,4 +38,6 @@ This project uses Husky to manage Git hooks:
 
 - `pre-commit`: Runs linting and tests
 - `commit-msg`: Validates commit message format
-- `pre-push`: Runs all tests 
+- `pre-push`: Runs all tests
+
+> Note: This project uses Husky v10 compatible hook format. 
