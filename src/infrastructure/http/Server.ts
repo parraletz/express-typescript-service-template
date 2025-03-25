@@ -35,10 +35,10 @@ export class Server {
   }
 
   private setupMiddleware(): void {
-    // Correlation ID middleware (debe ser el primero para capturar todas las peticiones)
+    // Correlation ID middleware
     this.app.use(correlationIdMiddleware)
 
-    // Seguridad
+    // Security
     this.app.use(
       helmet({
         contentSecurityPolicy: {
