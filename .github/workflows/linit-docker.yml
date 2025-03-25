@@ -14,4 +14,4 @@ jobs:
         with:
           dockerfile: Dockerfile
       - name: Build dockerfile
-        run: docker build . -t k8s-operator-template
+        run: docker build . -t express-template
