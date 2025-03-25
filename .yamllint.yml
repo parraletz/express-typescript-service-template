@@ -3,6 +3,7 @@ extends: default
 ignore: |
   node_modules/
   pnpm-lock.yaml
+  .github/workflows/*.yml
 
 rules:
   document-start:
