@@ -32,13 +32,18 @@
   // Configure tool-specific properties.
   // "customizations": {},
   "mounts": [
-    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+    "source=${localEnv:HOME}/.gitconfig,target=/mnt/.gitconfig,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.ssh,target=/mnt/.ssh,type=bind,consistency=cached",
+    "source=${env:SSH_AUTH_SOCK},target=/ssh-agent,type=bind"
   ],
+
+  "remoteEnv": {
+    "SSH_AUTH_SOCK": "/ssh-agent"
+  },
   "features": {
     "ghcr.io/devcontainers/features/git:1": {}
   },
-  "postCreateCommand": "pnpm install &&  git config --global --add safe.directory /workspaces/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "if [ -d /mnt/.ssh ]; then cp -r /mnt/.ssh/* /home/node/.ssh/. && chmod 700 /home/node/.ssh && chmod 600 /home/node/.ssh/*; fi && cp /mnt/.gitconfig /home/node/.gitconfig && pnpm install && git config --global --add safe.directory /workspaces/${localWorkspaceFolderBasename}",
 
   // Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
   "remoteUser": "node"

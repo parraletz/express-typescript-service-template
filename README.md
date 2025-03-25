@@ -1,4 +1,4 @@
-# Dummy TypeScript API
+# Express Template
 
 A TypeScript API template using Domain-Driven Design (DDD) architecture with Clean Architecture principles.
 
@@ -36,6 +36,14 @@ src/
 - Node.js (v22 or higher)
 - pnpm (v10 or higher)
 
+### Environment Variables
+
+The project uses environment variables for configuration. You can use the `.env.example` file as a reference to create your own `.env` file.
+
+### Development Container
+
+This project includes DevContainer support for Visual Studio Code, making it easy to get started with a consistent development environment. The DevContainer configuration includes all necessary dependencies and tools pre-configured.
+
 ### Installation
 
 ```bash
@@ -47,15 +55,6 @@ pnpm install
 
 # Start development server
 pnpm dev
-```
-
-### Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-PORT=3000
-NODE_ENV=development
 ```
 
 ## Adding a New Feature
