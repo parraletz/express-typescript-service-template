@@ -19,7 +19,8 @@ export default defineConfig([globalIgnores([
     "**/dist",
     "**/node_modules",
     "**/*.js",
-    "**/jest.config.ts"
+    "**/jest.config.ts",
+    "eslint.config.mjs"
 ]), {
     extends: compat.extends(
         "eslint:recommended",
@@ -41,6 +42,8 @@ export default defineConfig([globalIgnores([
 
         parserOptions: {
             project: "./tsconfig.json",
+            tsconfigRootDir: __dirname,
+            createDefaultProgram: true
         },
     },
 
