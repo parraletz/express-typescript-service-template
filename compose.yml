@@ -15,8 +15,8 @@ services:
       - NODE_ENV=${NODE_ENV:-development}
       - PORT=3000
     volumes:
-       - ..:/workspaces:cached
-    command: sleep infinity 
+      - ..:/workspaces:cached
+    command: sleep infinity
 networks:
   app-network:
-    driver: bridge 
+    driver: bridge
