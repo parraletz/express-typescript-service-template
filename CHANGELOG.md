@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/parraletz/express-typescript-service-template/compare/v1.0.6...v1.0.7) (2025-03-26)
+
+
+### Bug Fixes
+
+* Added attestations permissions ([a573e51](https://github.com/parraletz/express-typescript-service-template/commit/a573e51fbe8fa93f7a6875506bd2188629134402))
+
 ## [1.0.6](https://github.com/parraletz/express-typescript-service-template/compare/v1.0.5...v1.0.6) (2025-03-26)
 
 
