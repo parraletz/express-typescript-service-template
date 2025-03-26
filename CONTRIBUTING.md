@@ -1,4 +1,4 @@
-# Contributing to Dummy TypeScript API
+# Contributing to Express Template API
 
 ## Commit Message Format
 
